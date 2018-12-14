@@ -13,14 +13,11 @@ def wait_for_move():
             return e
 
 R = (255, 0, 0)
-Y = (255, 0, 0)
 G = (0, 255, 0)
 W = (255, 255, 255)
 
 score = 0
 round5score = 0
-
-for turn in range(10)
 
 for turn in range(4):
     applex = randint(0,7)
@@ -42,7 +39,7 @@ for turn in range(4):
                 sense.set_pixel(x, y, G)
                 score += 1
             else:
-                sense.show_message("Incorrect")
+                sense.show_message("No")
             sleep(1)
             sense.clear()
             break;
@@ -89,7 +86,8 @@ for turn in range(5):
                 score += 1
                 round5score += 1
             else:
-                sense.show_message("Incorrect")
+                sense.show_message("No")
+                round5score += 1
                 break;
             sleep(1)
             sense.clear()
@@ -146,7 +144,8 @@ for turn in range(8):
                 score += 1
                 round8score += 1
             else:
-                sense.show_message("Incorrect")
+                sense.show_message("No")
+                round8score += 1
                 break;
             sleep(1)
             sense.clear()
@@ -166,8 +165,5 @@ for turn in range(8):
         sense.set_pixel(x, y, W)
         
 for turn in range(10):
-    sense.show_message("You collected: " + str(score) + " apples")
-
-    
-
-
+    sense.show_message("Score: " + str(score) + " apples")
+    sense.clear()
